@@ -1,0 +1,29 @@
+Esse código Python faz uma busca no site do Mercado Livre para encontrar produtos e seus preços, e depois salva essas informações em um arquivo Excel. Aqui está um resumo do que cada parte do código faz:
+
+Importação de bibliotecas:
+requests: Para fazer requisições HTTP.
+BeautifulSoup: Para analisar o HTML.
+pandas: Para manipulação de dados e criação do arquivo Excel.
+Inicialização de listas:
+lista_produtos: Para armazenar os títulos e links dos produtos.
+lista_desc: Para armazenar os preços dos produtos.
+Entrada do usuário:
+produto_nome: O nome do produto que o usuário deseja buscar.
+Requisição HTTP:
+Faz uma requisição GET para a URL do Mercado Livre com o nome do produto fornecido pelo usuário.
+Análise do HTML:
+Usa BeautifulSoup para analisar o conteúdo HTML da página.
+Extração de dados:
+Encontra todos os produtos e seus preços na página.
+Para cada produto, extrai o título, link e, se disponível, a avaliação.
+Para cada preço, extrai a parte inteira e os centavos (se houver).
+Armazenamento de dados:
+Armazena os títulos e links dos produtos em lista_produtos.
+Armazena os preços em lista_desc.
+Combina lista_produtos e lista_desc em uma lista de tuplas chamada completo.
+Criação do DataFrame:
+Cria um DataFrame do pandas com os dados combinados.
+Exportação para Excel:
+Salva o DataFrame em um arquivo Excel com o nome do produto fornecido pelo usuário.
+Mensagem de sucesso:
+Imprime uma mensagem indicando que a tabela foi criada com sucesso.
